@@ -7,8 +7,8 @@ Registration of student
 Deleting Student details
 Updating details of student
 Getting the details of student
-Data Validation
-Exception Handling
+Data Validation : to validate the details comming from the client
+Exception Handling : using Exception Handler
 
 Java | MySQL | Hibernate | Spring | Spring Boot | Swagger
 
