@@ -1,0 +1,38 @@
+package com.student.exception;
+
+import java.time.LocalDate;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.context.request.WebRequest;
+
+import com.student.model.StudentExceptionDetails;
+
+@ControllerAdvice
+public class ExceptionHandler {
+	
+	@org.springframework.web.bind.annotation.ExceptionHandler(Exception.class)
+	public ResponseEntity<StudentExceptionDetails> studentExceptionDetails(Exception e, WebRequest request){
+		
+		return new ResponseEntity<>(new StudentExceptionDetails(LocalDate.now(), e.getMessage(), request.getDescription(false)d));
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+}

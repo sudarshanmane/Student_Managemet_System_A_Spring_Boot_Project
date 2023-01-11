@@ -1,0 +1,13 @@
+package com.student.model;
+
+public class Student {
+	
+	private Integer roll;
+	private String first_name;
+	private String last_name;
+	private Integer marks;
+	private String status;
+	
+	
+
+}

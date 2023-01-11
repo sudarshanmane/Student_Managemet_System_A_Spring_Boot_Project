@@ -1,0 +1,8 @@
+package com.student.service;
+
+import org.springframework.stereotype.Controller;
+
+@Controller
+public class StudentController {
+
+}

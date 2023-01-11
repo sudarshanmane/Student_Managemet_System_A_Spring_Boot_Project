@@ -1,0 +1,13 @@
+package com.student.model;
+
+import java.time.LocalDate;
+
+public class StudentDetails {
+	
+//	To show the details of exception to the client created this class
+	
+	private LocalDate date;
+	private String message;
+	private String desc;
+
+}

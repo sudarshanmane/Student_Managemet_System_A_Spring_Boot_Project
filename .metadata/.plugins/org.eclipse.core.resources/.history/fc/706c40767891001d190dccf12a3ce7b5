@@ -1,0 +1,33 @@
+package com.student.service;
+
+import javax.validation.Valid;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+import com.student.model.Student;
+
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
+
+@Controller
+public class StudentController {
+	
+	@PostMapping("saveStudentDetails")
+	public ResponseEntity<Student> savaStudent(@Valid @RequestBody Student student){
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,33 @@
+package com.student.exception;
+
+import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.ControllerAdvice;
+import org.springframework.web.context.request.WebRequest;
+
+import com.student.model.StudentExceptionDetails;
+
+@ControllerAdvice
+public class ExceptionHandler {
+	
+	public ResponseEntity<StudentExceptionDetails> studentExceptionDetails(Exception e, WebRequest request){
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+}

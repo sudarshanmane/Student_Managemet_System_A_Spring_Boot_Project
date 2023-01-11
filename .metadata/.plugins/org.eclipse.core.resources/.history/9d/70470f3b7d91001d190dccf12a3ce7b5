@@ -1,0 +1,16 @@
+package com.student.service;
+
+import org.springframework.stereotype.Service;
+
+import com.student.model.Student;
+
+@Service
+public class StudentService {
+	
+	public Student saveStudent(Student student) {
+		
+	}
+
+	
+	
+}

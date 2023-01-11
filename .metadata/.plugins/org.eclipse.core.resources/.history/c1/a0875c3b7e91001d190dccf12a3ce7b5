@@ -1,0 +1,40 @@
+package com.student.controller;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+
+import com.student.model.Student;
+import com.student.service.StudentService;
+
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
+
+@Controller
+public class StudentController {
+	
+	@Autowired
+	private StudentService service;
+	
+	@PostMapping("saveStudentDetails")
+	public ResponseEntity<Student> savaStudent(@Valid @RequestBody Student student){
+		
+		Student student2 = service.saveStudent(student);
+		return new ResponseEntity<Student>(student2,HttpStatus.ACCEPTED);	
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

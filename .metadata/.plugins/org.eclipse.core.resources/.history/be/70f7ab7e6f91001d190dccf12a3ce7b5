@@ -1,0 +1,72 @@
+package com.student.model;
+
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
+public class Student {
+	
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Integer roll;
+	private String first_name;
+	private String last_name;
+	private Integer marks;
+	private String status;
+	public Integer getRoll() {
+		return roll;
+	}
+	public void setRoll(Integer roll) {
+		this.roll = roll;
+	}
+	public String getFirst_name() {
+		return first_name;
+	}
+	public void setFirst_name(String first_name) {
+		this.first_name = first_name;
+	}
+	public String getLast_name() {
+		return last_name;
+	}
+	public void setLast_name(String last_name) {
+		this.last_name = last_name;
+	}
+	public Integer getMarks() {
+		return marks;
+	}
+	public void setMarks(Integer marks) {
+		this.marks = marks;
+	}
+	public String getStatus() {
+		return status;
+	}
+	public void setStatus(String status) {
+		this.status = status;
+	}
+	@Override
+	public String toString() {
+		return "Student [roll=" + roll + ", first_name=" + first_name + ", last_name=" + last_name + ", marks=" + marks
+				+ ", status=" + status + "]";
+	}
+	public Student(Integer roll, String first_name, String last_name, Integer marks, String status) {
+		super();
+		this.roll = roll;
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.marks = marks;
+		this.status = status;
+	}
+	public Student(String first_name, String last_name, Integer marks, String status) {
+		super();
+		this.first_name = first_name;
+		this.last_name = last_name;
+		this.marks = marks;
+		this.status = status;
+	}
+	public Student() {
+		super();
+	}
+
+}

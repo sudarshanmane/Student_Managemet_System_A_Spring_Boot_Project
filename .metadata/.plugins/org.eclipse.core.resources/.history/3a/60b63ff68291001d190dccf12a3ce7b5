@@ -1,0 +1,28 @@
+package com.student.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.student.model.Student;
+import com.student.repository.StudentRepository;
+
+@Service
+public class StudentService {
+	
+	@Autowired
+	private StudentRepository repository;
+	
+	
+	public Student saveStudent(Student student) {
+		Student student2 = repository.save(student);
+		return student2;
+	}
+	
+	public Student deleteStudent(Student student) {
+		Student student2 = repository.delete(student);
+		return student2;
+	}
+
+	
+	
+}

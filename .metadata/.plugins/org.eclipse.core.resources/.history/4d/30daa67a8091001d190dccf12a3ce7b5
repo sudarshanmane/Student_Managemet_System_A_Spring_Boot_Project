@@ -1,0 +1,50 @@
+package com.student.controller;
+
+import javax.validation.Valid;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import com.student.exception.StudentException;
+import com.student.model.Student;
+import com.student.model.StudentExceptionDetails;
+import com.student.service.StudentService;
+
+import io.swagger.v3.oas.annotations.parameters.RequestBody;
+
+@RestController
+public class StudentController {
+	
+	@Autowired
+	private StudentService service;
+	
+	@PostMapping("saveStudentDetails")
+	public ResponseEntity<Student> savaStudent(@Valid @RequestBody Student student) throws StudentException{
+		
+		if(student.getRoll() == null) {
+			throw new StudentException("Please do not provide the student roll to save the Student Details.");
+		}else {
+			Student student2 = service.saveStudent(student);
+			return new ResponseEntity<Student>(student2,HttpStatus.ACCEPTED);	
+		
+		}
+		
+	}
+	
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
